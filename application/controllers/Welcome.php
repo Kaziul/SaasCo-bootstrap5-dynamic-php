@@ -34,11 +34,6 @@ class Welcome extends CI_Controller
 		// }
 		$this->load->model('Menu_header_Model');
 		$data['header_elm'] = $this->Menu_header_Model->header_elements();
-
-
-		//  print("<pre>".print_r($data['header_elm'],true)."</pre>");  //exit; 
-
-
 		##################### head card ##############
 		$data['headcardDynamic'] = $this->db->get('head_app')->result();
 		##################### Features ##############
@@ -52,26 +47,19 @@ class Welcome extends CI_Controller
 		$data['discuse'] = $this->db->where('id', 0)->order_by('id', 'ASC')->get('discuse')->result();
 
 		##################### Members Area ##############
-		$query = $this->db->query("SELECT * FROM members ");
-		$data['membersDynamic'] = $query->result_array();
+		$data['membersDynamic'] = $this->db->get('members')->result();
 		##################### MembersDsc Area ##############
-		$query = $this->db->query("SELECT * FROM membersdsc ");
-		$data['membersDscDynamic'] = $query->result_array();
+		$data['membersDscDynamic'] = $this->db->get('membersdsc')->result();
 		##################### Video Area ##############
-		$query = $this->db->query("SELECT * FROM video ");
-		$data['videoDynamic'] = $query->result_array();
+		$data['videoDynamic'] = $this->db->get('video')->result();
 		##################### Choose Plan Area ##############
-		$query = $this->db->query("SELECT * FROM chooseplan ");
-		$data['chooseplanDynamic'] = $query->result_array();
+		$data['chooseplanDynamic'] = $this->db->get('chooseplan')->result();
 		##################### Plan Item Area ##############
-		$query = $this->db->query("SELECT * FROM planitems ");
-		$data['planitemsDynamic'] = $query->result_array();
+		$data['planitemsDynamic'] = $this->db->get('planitems')->result();
 		##################### Products Area ##############
-		$query = $this->db->query("SELECT * FROM products ");
-		$data['productsDynamic'] = $query->result_array();
+		$data['productsDynamic'] = $this->db->get('products')->result();
 		##################### Products Slider Area ##############
-		$query = $this->db->query("SELECT * FROM productsSlider ");
-		$data['productsSliderDynamic'] = $query->result_array();
+		$data['productsSliderDynamic'] = $this->db->get('productsSlider')->result();
 		##################### Asked Question Area ##############
 		$query4 = $this->db->query("SELECT * FROM askedquestion ORDER BY id ASC LIMIT 1");
 		$id3 = $query4->row();
@@ -82,52 +70,42 @@ class Welcome extends CI_Controller
 		$query = $this->db->query("SELECT * FROM askedquestion ");
 		$data['askedQuestionDynamic'] = $query->result_array();
 		##################### Customers Area ##############
-		$query = $this->db->query("SELECT * FROM customers ");
-		$data['customersDynamic'] = $query->result_array();
+		$data['customersDynamic'] = $this->db->get('customers')->result();
 		$query22 = $this->db->query("SELECT * FROM customers ");
 		$id22 = $query22->row();
 		$data['customers_text1'] = $id22->customers_text1;
 		$data['customers_text2'] = $id22->customers_text2;
 		$data['customers_text3'] = $id22->customers_text3;
 		##################### News Area ##############
-		$query = $this->db->query("SELECT * FROM newsarea ");
-		$data['newsDynamic'] = $query->result_array();
+		$data['newsDynamic'] = $this->db->get('newsarea')->result();
 		##################### NewsCards Area ##############
-		$query = $this->db->query("SELECT * FROM newscards ");
-		$data['newsCardsDynamic'] = $query->result_array();
+		$data['newsCardsDynamic'] = $this->db->get('newscards')->result();
 		##################### NewsCards Area ##############
-		$query = $this->db->query("SELECT * FROM newscardscol ");
-		$data['newsCardsColDynamic'] = $query->result_array();
+		$data['newsCardsColDynamic'] = $this->db->get('newscardscol')->result();
 		##################### questionFooter Area ##############
-		$query = $this->db->query("SELECT * FROM questionfooter ");
-		$data['questionFooterDynamic'] = $query->result_array();
+		$data['questionFooterDynamic'] = $this->db->get('questionfooter')->result();
 		##################### questionFooter Area ##############
-		$query = $this->db->query("SELECT * FROM addressfooter ");
-		$data['addressFooterDynamic'] = $query->result_array();
+		$data['addressFooterDynamic'] = $this->db->get('addressfooter')->result();
 		$query44 = $this->db->query("SELECT * FROM addressfooter ORDER BY id ASC LIMIT 1");
 		$id33 = $query44->row();
 		$data['addressFooter_logo'] = $id33->addressFooter_logo;
 		##################### questionFooter Area ##############
-		$query = $this->db->query("SELECT * FROM company ");
-		$data['companyDynamic'] = $query->result_array();
+		$data['companyDynamic'] = $this->db->get('company')->result();
 		$query45 = $this->db->query("SELECT * FROM company ORDER BY id ASC LIMIT 1");
 		$id34 = $query45->row();
 		$data['Company_title'] = $id34->Company_title;
 		##################### Services Area ##############
-		$query = $this->db->query("SELECT * FROM services ");
-		$data['servicesDynamic'] = $query->result_array();
+		$data['servicesDynamic'] = $this->db->get('services')->result();
 		$query46 = $this->db->query("SELECT * FROM services ORDER BY id ASC LIMIT 1");
 		$id35 = $query46->row();
 		$data['services_title'] = $id35->services_title;
 		##################### quicklink Area ##############
-		$query = $this->db->query("SELECT * FROM quicklink ");
-		$data['quicklinkDynamic'] = $query->result_array();
+		$data['quicklinkDynamic'] = $this->db->get('quicklink')->result();
 		$query47 = $this->db->query("SELECT * FROM quicklink ORDER BY id ASC LIMIT 1");
 		$id37 = $query47->row();
 		$data['quickLink_title'] = $id37->quickLink_title;
 		##################### mediaFooter Area ##############
-		$query = $this->db->query("SELECT * FROM mediafooter ");
-		$data['mediafooterDynamic'] = $query->result_array();
+		$data['mediafooterDynamic'] = $this->db->get('mediafooter')->result();
 		$query47 = $this->db->query("SELECT * FROM mediafooter ORDER BY id ASC LIMIT 1");
 		$id37 = $query47->row();
 		$data['mediaFooter_text'] = $id37->mediaFooter_text;

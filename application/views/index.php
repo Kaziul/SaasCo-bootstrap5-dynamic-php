@@ -187,8 +187,8 @@
                     <?php foreach ($membersDynamic as $valu) {   ?>
                         <div class="col-lg-8 col-md-10 text-center">
                             <div class="cmn-heading pt-5 mt-5 pb-3">
-                                <h3><?php echo  $valu['members_title']; ?></h3>
-                                <p><?php echo  $valu['members_desc']; ?> </p>
+                                <h3><?php echo  $valu->members_title; ?></h3>
+                                <p><?php echo  $valu->members_desc; ?> </p>
                             </div>
                         </div>
                     <?php } ?>
@@ -197,9 +197,9 @@
                     <?php foreach ($membersDscDynamic as $valu) {   ?>
                         <div class="col-lg-3 col-md-6 text-center">
                             <div class="members-info mt-5  ">
-                                <img src="<?php echo base_url('/back-end/uploads/') . $valu['membersDsc_img']; ?>" class="img-fluid" alt="Responsive image">
-                                <h4 class="mt-3 pt-3"><?php echo  $valu['membersDsc_name']; ?></h4>
-                                <p class="pt-2  <?php echo  $valu['membersDsc_aboutColor']; ?>"><?php echo  $valu['membersDsc_about']; ?></p>
+                                <img src="<?php echo base_url('/back-end/uploads/') . $valu->membersDsc_img; ?>" class="img-fluid" alt="Responsive image">
+                                <h4 class="mt-3 pt-3"><?php echo  $valu->membersDsc_name; ?></h4>
+                                <p class="pt-2  <?php echo  $valu->membersDsc_aboutColor; ?>"><?php echo  $valu->membersDsc_about; ?></p>
                             </div>
                         </div>
                     <?php } ?>
@@ -217,8 +217,8 @@
                         <?php foreach ($videoDynamic as $valu) {   ?>
                             <div class="card video_card_border" style="width: 57.312rem;">
                                 <div class="card-body video-cmn ">
-                                    <h3 class="text-white mt-5 pb-4 "><?php echo  $valu['video_title']; ?></h3>
-                                    <a href="<?php echo  $valu['video_link']; ?>"><i class="icon-style1 rounded-circle text-white fa-2x  <?php echo  $valu['video_icon']; ?> "></i></a>
+                                    <h3 class="text-white mt-5 pb-4 "><?php echo  $valu->video_title; ?></h3>
+                                    <a href="<?php echo  $valu->video_link; ?>"><i class="icon-style1 rounded-circle text-white fa-2x  <?php echo  $valu->video_icon; ?> "></i></a>
                                 </div>
                             </div>
                     </div>
@@ -235,8 +235,8 @@
                     <?php foreach ($chooseplanDynamic as $valu) {   ?>
                         <div class="col-lg-8 col-md-10  text-center">
                             <div class="cmn-heading pt-5 mt-5 pb-3">
-                                <h3><?php echo  $valu['choosePlan_title']; ?></h3>
-                                <p><?php echo  $valu['choosePlan_desc']; ?></p>
+                                <h3><?php echo  $valu->choosePlan_title; ?></h3>
+                                <p><?php echo  $valu->choosePlan_desc; ?></p>
                             </div>
                         </div>
                     <?php } ?>
@@ -255,20 +255,20 @@
                                 <div class="card-body text-center p-0  ">
                                     <div class="plan-cont d-flex justify-content-between  pl-3">
                                         <div class="plan-logo icon-style2 rounded-circle mt-4">
-                                            <img src="<?php echo base_url('/back-end/uploads/') . $valu['planItems_img']; ?>" class="img-fluid pt-4" alt="Responsive image">
+                                            <img src="<?php echo base_url('/back-end/uploads/') . $valu->planItems_img; ?>" class="img-fluid pt-4" alt="Responsive image">
                                         </div>
                                         <div class="plan-title mt-5">
-                                            <h4 class="rounded-circle-left"><?php echo  $valu['planItems_title']; ?></h4>
-                                            <h3 class="pt-4 "><?php echo  $valu['planItems_amount']; ?></h3>
+                                            <h4 class="rounded-circle-left"><?php echo  $valu->planItems_title; ?></h4>
+                                            <h3 class="pt-4 "><?php echo  $valu->planItems_amount; ?></h3>
                                         </div>
                                     </div>
                                     <div class="plan-txt-btn pt-3 ">
-                                        <p class="m-0"><?php echo  $valu['planItems_desc']; ?></p>
-                                        <p class="m-0"><?php echo  $valu['planItems_desc1']; ?></p>
-                                        <p class="m-0"><?php echo  $valu['planItems_desc2']; ?></p>
-                                        <p class="pb-4"><?php echo  $valu['planItems_desc3']; ?></p>
-                                        <a href="<?php echo  $valu['planItems_btnLink']; ?>"><button type="button" class="btn btn-color1 btn-lg mb-3"><?php echo  $valu['planItems_btnTxt']; ?>
-                                                <span class="grater"><i class="<?php echo  $valu['planItems_btnIcon']; ?>"></i></span></button></a>
+                                        <p class="m-0"><?php echo  $valu->planItems_desc; ?></p>
+                                        <p class="m-0"><?php echo  $valu->planItems_desc1; ?></p>
+                                        <p class="m-0"><?php echo  $valu->planItems_desc2; ?></p>
+                                        <p class="pb-4"><?php echo  $valu->planItems_desc3; ?></p>
+                                        <a href="<?php echo  $valu->planItems_btnLink; ?>"><button type="button" class="btn btn-color1 btn-lg mb-3"><?php echo  $valu->planItems_btnTxt; ?>
+                                                <span class="grater"><i class="<?php echo  $valu->planItems_btnIcon; ?>"></i></span></button></a>
                                     </div>
                                 </div>
                             </div>
@@ -279,8 +279,8 @@
                     <?php foreach ($productsDynamic as $valu) {   ?>
                         <div class="col-lg-8 col-md-10 text-center">
                             <div class="cmn-heading pt-5 my-5 pb-3">
-                                <h3><?php echo  $valu['products_title']; ?></h3>
-                                <p><?php echo  $valu['products_desc']; ?></p>
+                                <h3><?php echo  $valu->products_title; ?></h3>
+                                <p><?php echo  $valu->products_desc; ?></p>
                             </div>
                         </div>
                     <?php } ?>
@@ -291,12 +291,12 @@
                             <?php foreach ($productsSliderDynamic as $valu) {   ?>
                                 <div class="col-lg-5 col-md-5 ">
                                     <div class="design-Develop-txt ">
-                                        <p><?php echo  $valu['productsSlider_desc']; ?></p>
+                                        <p><?php echo  $valu->productsSlider_desc; ?></p>
                                         <div class="design-develop-img d-flex ">
-                                            <img src="<?php echo base_url('/back-end/uploads/') . $valu['productsSlider_img']; ?>" class="img-fluid" alt="Responsive image">
+                                            <img src="<?php echo base_url('/back-end/uploads/') . $valu->productsSlider_img; ?>" class="img-fluid" alt="Responsive image">
                                             <div class="about-developer  ">
-                                                <h3><?php echo  $valu['productsSlider_name']; ?></h3>
-                                                <h6 class="<?php echo  $valu['productsslider_color']; ?>"><?php echo  $valu['productsSlider_Dev']; ?></h6>
+                                                <h3><?php echo  $valu->productsSlider_name; ?></h3>
+                                                <h6 class="<?php echo  $valu->productsslider_color; ?>"><?php echo  $valu->productsSlider_Dev; ?></h6>
                                             </div>
                                         </div>
                                     </div>
@@ -307,12 +307,12 @@
                             <?php foreach ($productsSliderDynamic as $valu) {   ?>
                                 <div class="col-lg-5 col-md-5 col-sm-12">
                                     <div class="design-Develop-txt ">
-                                        <p><?php echo  $valu['productsSlider_desc']; ?></p>
+                                        <p><?php echo  $valu->productsSlider_desc; ?></p>
                                         <div class="design-develop-img d-flex ">
-                                            <img src="<?php echo base_url('/back-end/uploads/') . $valu['productsSlider_img']; ?>" class="img-fluid" alt="Responsive image">
+                                            <img src="<?php echo base_url('/back-end/uploads/') . $valu->productsSlider_img; ?>" class="img-fluid" alt="Responsive image">
                                             <div class="about-developer  ">
-                                                <h3><?php echo  $valu['productsSlider_name']; ?></h3>
-                                                <h6 class="<?php echo  $valu['productsslider_color']; ?>"><?php echo  $valu['productsSlider_Dev']; ?></h6>
+                                                <h3><?php echo  $valu->productsSlider_name; ?></h3>
+                                                <h6 class="<?php echo  $valu->productsslider_color; ?>"><?php echo  $valu->productsSlider_Dev; ?></h6>
                                             </div>
                                         </div>
                                     </div>
@@ -367,7 +367,7 @@
                 </h5>
                 <div class="customers-active owl-carousel  pt-1 pb-3">
                     <?php foreach ($customersDynamic as $valu) {   ?>
-                        <div class="item"><img src="<?php echo base_url('/back-end/uploads/') . $valu['customers_img1']; ?>" alt=""></div>
+                        <div class="item"><img src="<?php echo base_url('/back-end/uploads/') . $valu->customers_img1; ?>" alt=""></div>
                     <?php } ?>
                 </div>
             </div>
@@ -379,8 +379,8 @@
                     <div class="col-lg-8 col-md-10  text-center">
                         <?php foreach ($newsDynamic as $valu) {   ?>
                             <div class="cmn-heading pt-3 mt-5 pb-4">
-                                <h3><?php echo  $valu['newsArea_title']; ?></h3>
-                                <p><?php echo  $valu['newsArea_desc']; ?></p>
+                                <h3><?php echo  $valu->newsArea_title; ?></h3>
+                                <p><?php echo  $valu->newsArea_desc; ?></p>
                             </div>
                         <?php } ?>
                     </div>
@@ -390,13 +390,13 @@
                         <div class="col-lg-3 col-md-6 d-block d-lg-flex mt-4  d-flex justify-content-center">
                             <div class="card  " style="width: 16.875rem; max-height: 356px;">
                                 <div class=" text-center ">
-                                    <img src="<?php echo base_url('/back-end/uploads/') . $valu['newsCards_img']; ?>" class="img-fluid" alt="">
+                                    <img src="<?php echo base_url('/back-end/uploads/') . $valu->newsCards_img; ?>" class="img-fluid" alt="">
                                 </div>
                                 <div class="card-body  card-news-txt">
                                     <h5 class="card-title mt-2 px-2">
-                                        <?php echo  $valu['newsCards_title']; ?>
+                                        <?php echo  $valu->newsCards_title; ?>
                                     </h5>
-                                    <p class="card-text py-3 px-2"><?php echo  $valu['newsCards_date']; ?></p>
+                                    <p class="card-text py-3 px-2"><?php echo  $valu->newsCards_date; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -406,9 +406,9 @@
                             <div class="card  mb-3 " style="max-width: 16.875rem;">
                                 <div class="card-body card-news-txt">
                                     <h5 class="card-title mt-2 px-2">
-                                        <?php echo  $valu['newsCardsCol_title']; ?>
+                                        <?php echo  $valu->newsCardsCol_title; ?>
                                     </h5>
-                                    <p class="card-text py-3 px-2"><?php echo  $valu['newsCardsCol_date']; ?></p>
+                                    <p class="card-text py-3 px-2"><?php echo  $valu->newsCardsCol_date; ?></p>
                                 </div>
                             </div>
                         <?php } ?>
@@ -424,11 +424,11 @@
                     <div class="row ">
                         <?php foreach ($questionFooterDynamic as $valu) {   ?>
                             <div class="col-lg-7 col-md-8 pt-1">
-                                <h1 class=" text-white line-height-question"><?php echo  $valu['questionFooter_title']; ?></h1>
+                                <h1 class=" text-white line-height-question"><?php echo  $valu->questionFooter_title; ?></h1>
                             </div>
                             <div class="col-lg-5 col-md-4 d-flex justify-content-end pt-2">
-                                <a href="<?php echo  $valu['questionFooter_link']; ?>"><button type="button" class="btn btn-color btn-lg mt-5"><?php echo  $valu['questionFooter_btnTxt']; ?>
-                                        <span class="grater"><i class="<?php echo  $valu['questionFooter_icon']; ?>"></i></span></button></a>
+                                <a href="<?php echo  $valu->questionFooter_link; ?>"><button type="button" class="btn btn-color btn-lg mt-5"><?php echo  $valu->questionFooter_btnTxt; ?>
+                                        <span class="grater"><i class="<?php echo  $valu->questionFooter_icon; ?>"></i></span></button></a>
                             </div>
 
                         <?php } ?>
@@ -441,7 +441,7 @@
                             <img src="<?php echo base_url('/back-end/uploads/') . $addressFooter_logo; ?>" class="img-fluid pb-4 pt-1" alt="">
                             <div class="footer-text-cont  pt-3 mt-1">
                                 <?php foreach ($addressFooterDynamic as $valu) {   ?>
-                                    <p><?php echo  $valu['addressFooter_country']; ?> </p>
+                                    <p><?php echo  $valu->addressFooter_country; ?> </p>
                                 <?php } ?>
                             </div>
                         </div>
@@ -453,7 +453,7 @@
                                 <ul>
                                     <?php foreach ($companyDynamic as $valu) {   ?>
                                         <a href="#">
-                                            <li> >&nbsp; <?php echo  $valu['Company_text1']; ?></li>
+                                            <li> >&nbsp; <?php echo  $valu->Company_text1; ?></li>
                                         </a>
                                     <?php } ?>
                                 </ul>
@@ -468,7 +468,7 @@
                                 <ul>
                                     <?php foreach ($servicesDynamic as $valu) {   ?>
                                         <a href="#">
-                                            <li> >&nbsp; <?php echo  $valu['services_text1']; ?></li>
+                                            <li> >&nbsp; <?php echo  $valu->services_text1; ?></li>
                                         </a>
                                     <?php } ?>
                                 </ul>
@@ -483,7 +483,7 @@
                                 <ul>
                                     <?php foreach ($quicklinkDynamic as $valu) {   ?>
                                         <a href="#">
-                                            <li> >&nbsp; <?php echo  $valu['quickLink_text1']; ?></li>
+                                            <li> >&nbsp; <?php echo  $valu->quickLink_text1; ?></li>
                                         </a>
                                     <?php } ?>
                                 </ul>
@@ -503,7 +503,7 @@
                             <div class="media-cont d-flex float-end">
                                 <div class="media">
                                     <?php foreach ($mediafooterDynamic as $valu) {   ?>
-                                        <i class="<?php echo  $valu['mediaFooter_icon1']; ?>"></i>
+                                        <i class="<?php echo  $valu->mediaFooter_icon1; ?>"></i>
                                     <?php } ?>
                                 </div>
                             </div>
